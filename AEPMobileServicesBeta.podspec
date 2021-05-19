@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name         = "AEPMobileServices_beta"
-  s.version      = "3.0.0_beta"
+  s.name         = "AEPMobileServicesBeta"
+  s.version      = "3.0.0"
   s.summary      = "Mobile Services library for Adobe Experience Platform SDK. Written and maintained by Adobe."
   s.description  = <<-DESC
                    The Mobile Services library provides APIs that allow use of the Mobile Services product in the Adobe Experience Platform SDK.
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.license      = {:type => "Commercial", :file => "LICENSE.md"}
   s.author       = "Adobe Experience Platform SDK Team"
-  s.source       = { :git => 'https://github.com/Adobe-Marketing-Cloud/acp-sdks.git', :tag => "v#{s.version}-#{s.name}" }
+  s.source       = { :git => 'https://github.com/shalehaha/acp-sdks.git', :tag => "v#{s.version}-#{s.name}" }
   s.platform     = :ios, '10.0'
   s.requires_arc = true
 
@@ -21,9 +21,8 @@ Pod::Spec.new do |s|
   s.dependency "AEPCore"
 
   s.subspec "xcframeworks" do |f|
-    f.ios.vendored_frameworks = "#{s.name}.xcframework"
-    f.ios.source_files = "#{s.name}.xcframework/ios-arm64_armv7_armv7s/Headers/*.h", "include/*.m"
-    f.ios.libraries = "sqlite3.0", "z", "c++"
+    f.ios.vendored_frameworks = "AEPMobileServices.xcframework"
+    f.ios.source_files = "AEPMobileServices.xcframework/ios-arm64_armv7_armv7s/Headers/*.h", "include/*.m"
   end
 
 end
