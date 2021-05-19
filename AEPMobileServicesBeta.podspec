@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/shalehaha/acp-sdks.git', :tag => "v#{s.version}-#{s.name}" }
   s.platform     = :ios, '10.0'
   s.requires_arc = true
+  s.swift_version = '5.1'
 
   s.default_subspec = 'xcframeworks'
   s.cocoapods_version = ">= 1.10"
